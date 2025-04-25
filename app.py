@@ -31,7 +31,7 @@ from sklearn.metrics import accuracy_score, roc_auc_score, roc_curve
 
 # ╭─ Keys & Config ──────────────────────────────────────────────────────────╮
 API_KEY = st.secrets.get("OPENROUTER_API_KEY") or os.getenv("OPENROUTER_API_KEY") or ""
-DEFAULT_MODEL = "mistralai/mistral-7b-instruct"  # free tier
+DEFAULT_MODEL = "mistralai/mistral-7b-instruct:free"  # free tier
 
 # ╭─ OpenRouter Chat Helper ─────────────────────────────────────────────────╮
 def openrouter_chat(messages, model=DEFAULT_MODEL, temperature=0.7):
